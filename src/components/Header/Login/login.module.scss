@@ -1,0 +1,113 @@
+@import "../../../styles/var.scss";
+
+.login {
+  position: relative;
+  margin: 10% auto 0;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  background-color: $color_greyF4;
+  pointer-events: all;
+  animation: show 0.2s ease;
+
+  &__closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__input {
+    border-radius: 6px;
+    border: none;
+    padding: 10px;
+
+    &:focus {
+      outline: 2px solid $color_blue;
+    }
+
+    &:hover {
+      background-color: $color_purple;
+    }
+  }
+
+  &__formBtn {
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    padding: 10px;
+    color: $color_white;
+    background-color: $color_green;
+    transition-property: color, border-color, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+
+    &:focus {
+      outline: none;
+      background-color: $color_lightGreen;
+    }
+
+    &:hover {
+      background-color: $color_darkGreen;
+    }
+    &:active {
+      border-color: $color_green;
+      color: $color_black;
+      background-color: $color_white;
+    }
+  }
+
+  &__error {
+    margin-bottom: -13px;
+    font-size: 12px;
+    color: $color_red;
+  }
+}
+
+.spinner {
+  z-index: 100;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  border-right: 4px solid $color_green;
+  border-top: 4px solid $color_red;
+  border-bottom: 4px solid $color_red;
+  border-left: 4px solid $color_green;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes show {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

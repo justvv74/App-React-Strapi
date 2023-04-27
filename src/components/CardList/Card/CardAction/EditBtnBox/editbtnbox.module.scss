@@ -1,0 +1,73 @@
+@import "../../../../../styles/var.scss";
+@import "../../../../../styles/mixin.scss";
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: -2px;
+
+  &__btn {
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 10px;
+    width: 80px;
+    cursor: pointer;
+    @include transition;
+
+    &_edit {
+      background-color: $color_purple;
+
+      &:hover {
+        background-color: $color_blue;
+      }
+
+      &:active {
+        border-color: $color_blue;
+        color: $color_blue;
+        background-color: $color_purple;
+      }
+    }
+
+    &_save {
+      background-color: $color_lightGreen;
+
+      &:hover {
+        background-color: $color_green;
+      }
+
+      &:active {
+        border-color: $color_green;
+        color: $color_green;
+        background-color: $color_white;
+      }
+    }
+  }
+
+  &__error {
+    color: $color_red;
+  }
+}
+
+.spinner {
+  height: 20px;
+  width: 20px;
+  border-right: 4px solid $color_green;
+  border-top: 4px solid $color_red;
+  border-bottom: 4px solid $color_red;
+  border-left: 4px solid $color_green;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

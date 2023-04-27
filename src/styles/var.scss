@@ -1,0 +1,28 @@
+$color_black: #333333;
+$color_pink: #ea8979;
+$color_orange: #ee735d;
+$color_orangeFF: #ffdda9;
+$color_red: #dc3e22;
+$color_darkRed: #b7280f;
+$color_red9F: #9f210c;
+$color_lightGreen: #c8d95b;
+$color_green: #a8b64f;
+$color_darkGreen: #899441;
+$color_blue: #c5f1ff;
+$color_purple: #dfdcfe;
+$color_white: #ffffff;
+$color_greyE4: #e4e4e4;
+$color_greyF4: #f4f4f4;
+$color_greyEC: #ececec;
+$color_greyC4: #c4c4c4;
+$color_grey99: #999999;
+
+$container_padding: 0 80px;
+
+@media (max-width: 568px) {
+  $container_padding: 0 10px;
+}
+
+@media (max-width: 568px) {
+  $container_padding: 0 5px;
+}

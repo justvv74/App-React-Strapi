@@ -1,0 +1,109 @@
+@import "../../styles/var.scss";
+@import "../../styles/mixin.scss";
+
+.modal {
+  position: relative;
+  align-self: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+  width: 50%;
+  min-width: 300px;
+  height: auto;
+  background-color: $color_greyF4;
+  pointer-events: all;
+  animation: show 0.2s ease;
+
+  &__closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input {
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  &__textarea {
+    resize: vertical;
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: $color_lightGreen;
+    @include transition;
+
+    &:hover {
+      background-color: $color_green;
+    }
+
+    &:active {
+      border-color: $color_green;
+      color: $color_green;
+      background-color: $color_white;
+    }
+  }
+
+  &__error {
+    margin-bottom: -18px;
+    color: $color_red;
+  }
+}
+
+.spinner {
+  z-index: 100;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  border-right: 4px solid $color_green;
+  border-top: 4px solid $color_red;
+  border-bottom: 4px solid $color_red;
+  border-left: 4px solid $color_green;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes show {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../styles/var.scss";
+@import "../../styles/mixin.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: $color_greyF4;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $color_black;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+    color: $color_black;
+  }
+
+  &__info {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    text-align: right;
+    color: $color_black;
+  }
+
+  &__created {
+    margin-right: 20px;
+  }
+
+  &__inputTitle {
+    margin: 0 0 10px -10px;
+    border: none;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__inputDescr {
+    margin-left: -10px;
+    border: none;
+    border-radius: 6px;
+    padding: 0 10px;
+    height: 100px;
+    resize: vertical;
+  }
+
+  &__inputTag {
+    margin-left: -2px;
+    border: none;
+    border-radius: 6px;
+    width: 120px;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__backBtn {
+    border: 1px solid $color_black;
+    border-radius: 6px;
+    padding: 5px 10px;
+    background-color: $color_purple;
+    @include transition;
+
+    &:hover {
+      background-color: $color_blue;
+    }
+
+    &:active {
+      background-color: $color_orange;
+    }
+  }
+
+  &__search {
+    border: 1px solid $color_black;
+    border-radius: 6px;
+    padding: 5px 10px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 568px) {
+  .card {
+    padding: 10px;
+
+    &__inputTitle {
+      margin: 0 -5px 10px -5px;
+      padding: 0 5px;
+    }
+
+    &__inputDescr {
+      margin: 0 -5px 10px -5px;
+      padding: 0 5px;
+      height: 100px;
+    }
+  }
+}

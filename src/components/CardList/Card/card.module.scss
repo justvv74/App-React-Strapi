@@ -1,0 +1,38 @@
+@import "../../../styles/var.scss";
+
+.card {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: $color_greyF4;
+
+  // &__image {
+
+  // }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $color_black;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+    color: $color_black;
+  }
+
+  &__info {
+    text-align: right;
+    color: $color_black;
+  }
+
+  &__created {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .card {
+    padding: 10px;
+  }
+}

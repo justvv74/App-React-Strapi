@@ -1,0 +1,45 @@
+@import "../../../../styles/var.scss";
+@import "../../../../styles/mixin.scss";
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__btn {
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 10px;
+    width: 80px;
+    cursor: pointer;
+    @include transition;
+
+    &_edit {
+      background-color: $color_purple;
+
+      &:hover {
+        background-color: $color_blue;
+      }
+
+      &:active {
+        border-color: $color_blue;
+        color: $color_blue;
+        background-color: $color_purple;
+      }
+    }
+
+    &_delete {
+      background-color: $color_red;
+
+      &:hover {
+        background-color: $color_darkRed;
+      }
+
+      &:active {
+        border-color: $color_red;
+        color: $color_red;
+        background-color: $color_white;
+      }
+    }
+  }
+}
