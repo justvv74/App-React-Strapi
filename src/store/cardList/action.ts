@@ -43,7 +43,7 @@ export const postListRequestAsync =
     dispatch(postRequest());
     console.log(112233);
     axios
-      .get(`http://${process.env.REACT_APP_BACKEND_URL}/api/posts`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}api/posts`)
       .then((res) => {
         dispatch(postRequestSuccess(res.data.data));
       })
